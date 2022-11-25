@@ -1,6 +1,6 @@
 # This app is a admin dash board website.
 
-Link to deployed version: admin-dashboard-ten-chi.vercel.app
+Link to deployed version: https://admin-dashboard-ten-chi.vercel.app/
 
 Frame worK: React
 Technologies used: Material UI, NodeJS, Nivo Charts, Formik and Yup
