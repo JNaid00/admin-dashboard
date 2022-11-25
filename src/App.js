@@ -5,8 +5,8 @@ import { Route, Routes } from "react-router-dom";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team"
-// import Sidebar from "./scenes/"
-// import Sidebar from "./scenes/"
+import Contacts from "./scenes/contacts"
+import Invocies from "./scenes/invoices"
 // import Sidebar from "./scenes/"
 // import Sidebar from "./scenes/"
 // import Sidebar from "./scenes/"
@@ -24,6 +24,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
 			  <Route path="/team" element={<Team />} />
+			  <Route path="/contacts" element={<Contacts />} />
+			  <Route path="/invoices" element={<Invocies />} />
             </Routes>
           </main>
         </div>
