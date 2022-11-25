@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../../components/Header";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box , ypography} from "@mui/system";
 const index = () => {
   return (
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="Center">
         <Header
-          title="Dashboard"
-          subtitle="Welcome to your dash board"
+          title="Manage Team"
+          subtitle="Welcome to Team Page"
         ></Header>
       </Box>
     </Box>
