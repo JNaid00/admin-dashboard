@@ -86,7 +86,7 @@ const chartList = [
   {
     title: "Pie Chart",
     to: "/pie",
-    icon: <CalendarTodayOutlinedIcon />,
+    icon: <PieChartOutlineOutlinedIcon />,
 	id: "Pie_Chart",
   },
   {
