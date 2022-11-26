@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
+import toast from 'react-hot-toast';
 const Calendar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -34,6 +35,7 @@ const Calendar = () => {
         allDay: selected.allDay,
       });
     }
+	toast.success("Event added successfully");
   };
   const handleEventClick = (selected) => {
     if (
