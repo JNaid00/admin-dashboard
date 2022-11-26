@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../components/Header";
 import { Box, useTheme, Button, TextField } from "@mui/material";
 import { tokens } from "../../theme";
-import { mockDataContacts } from "../../data/mockData";
 import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
