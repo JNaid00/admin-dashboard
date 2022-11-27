@@ -15,18 +15,23 @@ import {
 } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
+import Modal from "../../components/Modal";
 const Calendar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const [currentEvents, setcurrentEvents] = useState([]);
-
+  const [modalInput, setModal] = useState(false);
+  const [title, setTitle] = useState("");
   const handleDateClick = (selected) => {
     const title = prompt("Please enter a title for your event");
+    //setModal(true);
+	console.log(title);
     const calenderApi = selected.view.calendar;
     calenderApi.unselect();
-    if (title) {
+	while(modalInput){}
+    if (title !== "") {
       calenderApi.addEvent({
         id: `${selected.dateStr}-${title}`,
         title,
@@ -35,7 +40,9 @@ const Calendar = () => {
         allDay: selected.allDay,
       });
     }
-	toast.success("Event added successfully");
+    toast.success("Event added successfully");
+
+    
   };
   const handleEventClick = (selected) => {
     if (
@@ -53,7 +60,7 @@ const Calendar = () => {
         title="Calender Page"
         subtitle="Full Calender interaction page"
       ></Header>
-
+      {modalInput && <Modal closeModal={setModal} titleInput={setTitle} title={title}/>}
       <Box justifyContent="space-between" display="flex">
         <Box
           flex="1 1 20%"

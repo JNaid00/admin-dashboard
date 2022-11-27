@@ -9,7 +9,7 @@ import Contacts from "./scenes/contacts"
 import Invocies from "./scenes/invoices"
 import Form from "./scenes/form"
 import Calender from "./scenes/calendar"
-// import Sidebar from "./scenes/"
+import FAQ from "./scenes/faq"
 // import Sidebar from "./scenes/"
 
 import { Toaster } from 'react-hot-toast';
@@ -31,6 +31,7 @@ function App() {
 			  <Route path="/invoices" element={<Invocies />} />
 			  <Route path="/form" element={<Form />} />
 			  <Route path="/calendar" element={<Calender />} />
+			  <Route path="/faq" element={<FAQ />} />
             </Routes>
           </main>
         </div>
