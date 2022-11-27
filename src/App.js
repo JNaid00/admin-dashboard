@@ -11,7 +11,7 @@ import Form from "./scenes/form"
 import Calender from "./scenes/calendar"
 import FAQ from "./scenes/faq"
 import BAR from "./scenes/bar"
-
+import PieChart from "./scenes/pie"
 import { Toaster } from 'react-hot-toast';
 function App() {
   const [theme, colorMode] = useMode();
@@ -33,6 +33,7 @@ function App() {
 			  <Route path="/calendar" element={<Calender />} />
 			  <Route path="/faq" element={<FAQ />} />
 			  <Route path="/bar" element={<BAR />} />
+			  <Route path="/pie" element={<PieChart />} />
             </Routes>
           </main>
         </div>
