@@ -23,7 +23,7 @@ const Calendar = () => {
 
   const [currentEvents, setcurrentEvents] = useState([]);
   const [modalInput, setModal] = useState(false);
-  const [title, setTitle] = useState("");
+//   const [title, setTitle] = useState("");
   const handleDateClick = (selected) => {
     const title = prompt("Please enter a title for your event");
     //setModal(true);
@@ -31,7 +31,7 @@ const Calendar = () => {
     const calenderApi = selected.view.calendar;
     calenderApi.unselect();
 	while(modalInput){}
-    if (title !== "") {
+    if (title) {
       calenderApi.addEvent({
         id: `${selected.dateStr}-${title}`,
         title,
@@ -39,8 +39,11 @@ const Calendar = () => {
         end: selected.endStr,
         allDay: selected.allDay,
       });
-    }
-    toast.success("Event added successfully");
+	  toast.success("Event added successfully");
+    }else{
+		toast.error("Event was not added");
+	}
+    
 
     
   };
@@ -60,7 +63,7 @@ const Calendar = () => {
         title="Calender Page"
         subtitle="Full Calender interaction page"
       ></Header>
-      {modalInput && <Modal closeModal={setModal} titleInput={setTitle} title={title}/>}
+      {/* {modalInput && <Modal closeModal={setModal} titleInput={setTitle} title={title}/>} */}
       <Box justifyContent="space-between" display="flex">
         <Box
           flex="1 1 20%"
