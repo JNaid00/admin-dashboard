@@ -2,7 +2,7 @@ import { useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
 import { tokens, useMode} from "../theme";
 import { mockBarData as data } from "../data/mockData";
-const BarChart = () => {
+const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
@@ -98,7 +98,7 @@ const BarChart = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: "Number of individuals",
+        legend: isDashboard ? undefined : "Number of individuals",
         legendPosition: "middle",
         legendOffset: 32,
       }}
@@ -106,7 +106,7 @@ const BarChart = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: "Country Code",
+        legend: isDashboard ? undefined : "Country Code",
         legendPosition: "middle",
         legendOffset: -40,
       }}
@@ -118,7 +118,8 @@ const BarChart = () => {
         from: "color",
         modifiers: [["darker", 1.6]],
       }}
-      legends={[
+      legends={!isDashboard
+		? [
         {
           dataFrom: "keys",
           anchor: "bottom-right",
@@ -141,12 +142,12 @@ const BarChart = () => {
             },
           ],
         },
-      ]}
+      ] : undefined}
       role="application"
       ariaLabel="Nivo bar chart demo"
       barAriaLabel={function (e) {
         return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
-      }}
+      } }
     />
   );
 };

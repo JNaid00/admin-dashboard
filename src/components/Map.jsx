@@ -47,6 +47,7 @@ const GeographyChart = ({ isDashboard = false }) => {
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       domain={[0, 1000000]}
       unknownColor="#666666"
+	  colors="nivo"
       label="properties.name"
       valueFormat=".2s"
       projectionScale={isDashboard ? 40 : 150}
