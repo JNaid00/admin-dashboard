@@ -52,7 +52,7 @@ const Invocies = () => {
         subtitle="Shows all the Invoices present"
       ></Header>
       <Box
-        mt="40px"
+        mt="10px"
         height="75vh"
         sx={{
           "& .MuiDataGrid-root": {

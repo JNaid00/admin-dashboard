@@ -55,7 +55,7 @@ const LineChart = ({ isDashboard = false, curveType = "linear" , pointsEnable = 
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
       xScale={{ type: "point" }}
       yScale={{
-        type: "linear",
+        type: "linear", 
         min: "auto",
         max: "auto",
         stacked: false,

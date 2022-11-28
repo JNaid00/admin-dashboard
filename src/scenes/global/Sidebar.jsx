@@ -110,6 +110,12 @@ const Sidebar = () => {
   const [selected, setSelected] = useState("Dashboard");
   return (
     <Box
+		// position="fixed"
+		height="100%"
+		zIndex="1"
+		top="0"
+		left="0"
+		
       sx={{
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,

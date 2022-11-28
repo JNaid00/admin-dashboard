@@ -13,6 +13,7 @@ import FAQ from "./scenes/faq"
 import BAR from "./scenes/bar"
 import PieChart from "./scenes/pie"
 import LineChartPage from "./scenes/line"
+import Map from "./scenes/geography"
 import { Toaster } from 'react-hot-toast';
 function App() {
   const [theme, colorMode] = useMode();
@@ -36,6 +37,7 @@ function App() {
 			  <Route path="/bar" element={<BAR />} />
 			  <Route path="/pie" element={<PieChart />} />
 			  <Route path="/line" element={<LineChartPage />} />
+			  <Route path="/geography" element={<Map />} />
             </Routes>
           </main>
         </div>
