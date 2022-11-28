@@ -17,7 +17,7 @@ const Dashboard = () => {
 	const theme = useTheme();
 	const colors = tokens(theme.palette.mode);
   return (
-    <Box m="20px">
+    <Box m="20px" overflow="auto">
       
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
@@ -52,6 +52,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+		  borderRadius="20px"
         >
           <StatBox
             title="123,456"
@@ -71,6 +72,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+		  borderRadius="20px"
         >
           <StatBox
             title="456,789"
@@ -90,6 +92,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+		  borderRadius="20px"
         >
           <StatBox
             title="1,122"
@@ -109,6 +112,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+		  borderRadius="20px"
         >
           <StatBox
             title="2,159,753"
@@ -128,6 +132,7 @@ const Dashboard = () => {
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+		  borderRadius="20px"
         >
           <Box
             mt="25px"
@@ -135,8 +140,9 @@ const Dashboard = () => {
             display="flex "
             justifyContent="space-between"
             alignItems="center"
+			
           >
-            <Box>
+            <Box >
               <Typography
                 variant="h5"
                 fontWeight="600"
@@ -169,6 +175,7 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           overflow="auto"
+		  borderRadius="20px"
         >
           <Box
             display="flex"
@@ -221,6 +228,7 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="30px"
+		  borderRadius="20px"
         >
           <Typography variant="h5" fontWeight="600">
             Campaign
@@ -246,6 +254,7 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+		  borderRadius="20px"
         >
           <Typography
             variant="h5"
@@ -263,6 +272,7 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           padding="30px"
+		  borderRadius="20px"
         >
           <Typography
             variant="h5"
